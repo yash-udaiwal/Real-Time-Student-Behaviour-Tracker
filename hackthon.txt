@@ -1,0 +1,61 @@
+Admin_LoginPage, Admin, Student_Details, Teacher_Details
+
+
+
+create table stud(
+roll_no number(20) primary key,
+name varchar2(40) not null,
+class varchar2(40) not null,
+gender varchar2(10) not null,
+contact number(10) not null,
+dob varchar2(20) not null,
+guardian varchar2(30) not null,
+guardian_cont varchar2(30) not null);
+
+
+
+
+
+create table teacher(
+id number(20) primary key,
+name varchar2(40) not null,
+subject varchar2(40) not null,
+gender varchar2(10) not null,
+contact number(10) not null,
+highest_qual varchar2(30) not null);
+
+
+
+
+create table userss(
+user_type varchar2(30) not null,
+id number not null,
+username varchar2(30) not null,
+password varchar2(30) not null,
+CONSTRAINT CmpKey_User_type_ID PRIMARY KEY (user_type, id));
+
+
+
+create table response (
+student varchar2(20),
+roll_no varchar2(20),
+teacher_name varchar2(25),
+attendance varchar2(20),
+attentive varchar2(20),
+uniform varchar2(20),
+behaviour varchar2(20), 
+ethics varchar2(20),
+english varchar2(20),
+extra varchar2(20));
+
+create table score(
+student varchar2(20),
+roll_no varchar2(20),
+attendance varchar2(20),
+attentive varchar2(20),
+uniform varchar2(20),
+behaviour varchar2(20), 
+ethics varchar2(20),
+english varchar2(20),
+extra varchar2(20));
+
